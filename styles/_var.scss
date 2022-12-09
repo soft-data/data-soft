@@ -1,0 +1,35 @@
+$primary: #4466e2;
+$secondary: #6b6b6b;
+$white: #ffffff;
+$black: #000203;
+$primary-light: #ebefff;
+$overlay-gradient: linear-gradient(
+  0.25deg,
+  #000000 10.4%,
+  rgba(0, 0, 0, 0) 60.91%
+);
+
+$menu-expanded: sm;
+
+%h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: $black;
+}
+
+%h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: $black;
+}
+%h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: $black;
+}

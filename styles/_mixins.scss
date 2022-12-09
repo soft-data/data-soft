@@ -1,0 +1,30 @@
+@use "./sizes";
+
+@mixin make-container() {
+  & {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    @each $key, $value in sizes.$grid-breakpoints {
+      @media only screen and (min-width: $value) {
+        & {
+          max-width: map-get(sizes.$container-widths, $key);
+        }
+      }
+    }
+  } 
+}
+
+@mixin media-up($screen) {
+  @each $key, $value in sizes.$grid-breakpoints {
+    @if($screen == $key){
+      @media only screen and (min-width: $value) {
+        & {
+          @content;
+        }                                    
+    }
+    }
+  }
+}
