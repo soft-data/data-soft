@@ -1,3 +1,4 @@
+@use 'styles/mixins';
 @import 'styles/var';
 @import '../../node_modules/rfs/scss.scss';
 
@@ -6,4 +7,21 @@
   display: flex;
   flex-direction: column;
 	@include rfs(22px, gap);
+  .header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .info{
+    width: 100%;
+  }
+  @include mixins.media-up(md){
+    .header{
+      flex-direction: row;
+      gap: 0;
+    }
+    .info{
+      width: 60%;
+    }
+  }
 }

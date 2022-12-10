@@ -1,10 +1,10 @@
 import React from 'react'
-import classes from './title.module.scss'
+import classes from './text.module.scss'
 import { motion, TargetAndTransition } from 'framer-motion'
 
 interface Props {
-	type: 'h1' | 'h2' | 'h3' | 'body-subtitle'
-	title: string
+	type: 'h1' | 'h2' | 'h3' | 'body-subtitle' | 'body-text'
+	text: string
 }
 
 const variant: {
@@ -21,7 +21,7 @@ const variant: {
 	}
 }
 
-const Title = ({ type, title }: Props) => {
+const Text = ({ type, text }: Props) => {
 	switch (type) {
 		case 'h1': {
 			return (
@@ -29,7 +29,7 @@ const Title = ({ type, title }: Props) => {
 					variants={variant}
 					className={classes.h1}
 				>
-					{title}
+					{text}
 				</motion.h1>
 			)
 		}
@@ -39,7 +39,7 @@ const Title = ({ type, title }: Props) => {
 					variants={variant}
 					className={classes.h2}
 				>
-					{title}
+					{text}
 				</motion.h2>
 			)
 		}
@@ -49,7 +49,7 @@ const Title = ({ type, title }: Props) => {
 					variants={variant}
 					className={classes.h3}
 				>
-					{title}
+					{text}
 				</motion.h3>
 			)
 		}
@@ -59,8 +59,15 @@ const Title = ({ type, title }: Props) => {
 					variants={variant}
 					className={classes.body_subtitle}
 				>
-					{title}
+					{text}
 				</motion.h4>
+			)
+		}
+		case 'body-text': {
+			return (
+				<motion.p variants={variant} className={classes.body_text}>
+					{text}
+				</motion.p>
 			)
 		}
 		default: {
@@ -69,4 +76,4 @@ const Title = ({ type, title }: Props) => {
 	}
 }
 
-export default Title
+export default Text

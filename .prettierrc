@@ -7,5 +7,6 @@
     "useTabs": true,
     "tabWidth": 2,
     "proseWrap": "always",
-    "printWidth": 100
+    "printWidth": 100,
+    "console": "warning"
 }

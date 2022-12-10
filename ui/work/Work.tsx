@@ -4,7 +4,7 @@ import { motion, TargetAndTransition } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import classes from './work.module.scss'
-import { Title } from '../../components'
+import { Text } from '../../components'
 
 const workVariants: {
 	show: TargetAndTransition
@@ -26,11 +26,10 @@ const workVariants: {
 }
 
 const Work = () => {
-	const { ref, inView, entry } = useInView({
+	const { ref, inView } = useInView({
 		rootMargin: '-100px',
-		triggerOnce: false
+		triggerOnce: true
 	})
-	console.log(entry)
 	return (
 		<motion.div
 			ref={ref}
@@ -39,15 +38,27 @@ const Work = () => {
 			animate={inView ? 'show' : 'hidden'}
 			className={classes.work}
 		>
-			<Title
+			<Text
 				type='body-subtitle'
-				title='Our Works'
+				text='Our Works'
 			/>
-			<motion.div variants={workVariants} className={classes.header}>
-				<Title
+			<motion.div
+				variants={workVariants}
+				className={classes.header}
+			>
+				<Text
 					type='h2'
-					title='We help buisnesses to make their product come to life, worldwide'
+					text='We help buisnesses to make their product come to life, worldwide'
 				/>
+				<motion.div
+					variants={workVariants}
+					className={classes.info}
+				>
+					<Text
+						type='body-text'
+						text='Lorem ipsum dolor sit amet consectetur. Sed lacus posuere sit ullamcorper dignissim. Pellentesque quis morbi sapien lectus accumsan porttitor malesuada'
+					/>
+				</motion.div>
 			</motion.div>
 		</motion.div>
 	)

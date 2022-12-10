@@ -1,1 +1,1 @@
-export {default as Title} from './titles/Title'
+export {default as Text} from './text/Text'
