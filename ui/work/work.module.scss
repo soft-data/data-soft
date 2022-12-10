@@ -1,0 +1,9 @@
+@import 'styles/var';
+@import '../../node_modules/rfs/scss.scss';
+
+.work {
+	@include rfs(80px 0, padding);
+  display: flex;
+  flex-direction: column;
+	@include rfs(22px, gap);
+}

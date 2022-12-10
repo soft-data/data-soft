@@ -1,0 +1,18 @@
+@import 'styles/var';
+@import '../../node_modules/rfs/scss.scss';
+.h1 {
+}
+.h2 {
+	font-weight: 700;
+	@include rfs(40px, font-size);
+	@include rfs(50px, line-height);
+	color: $black;
+}
+.h3 {
+}
+.body_subtitle {
+	font-weight: 700;
+	@include rfs(20px, font-size);
+	@include rfs(24px, line-height);
+	color: $secondary;
+}
