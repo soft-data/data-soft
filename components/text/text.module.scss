@@ -14,6 +14,12 @@
 	@include rfs(44px, line-height);
 	color: $black;
 }
+.h4 {
+	font-weight: 700;
+	@include rfs(24px, font-size);
+	@include rfs(30px, line-height);
+	color: $white;
+}
 .body_subtitle {
 	font-weight: 700;
 	@include rfs(18px, font-size);

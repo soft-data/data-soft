@@ -19,3 +19,11 @@
 	color: $white;
 	text-align: center;
 }
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	@include rfs(70px, gap);
+	@include rfs(60px 0, padding);
+}

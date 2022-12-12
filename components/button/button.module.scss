@@ -25,4 +25,14 @@
 		@include rfs(10px 30px, padding);
 		@include rfs(30px, border-radius);
 	}
+	&[data-type='gray'] {
+		padding: 5px 20px;
+		font-weight: 700;
+		color: #ffffff;
+		background: #6b6b6b;
+		@include rfs(16px, font-size);
+		@include rfs(20px, line-height);
+		@include rfs(5px 20px, padding);
+		@include rfs(30px, border-radius);
+	}
 }

@@ -3,7 +3,7 @@ import classes from './text.module.scss'
 import { motion, TargetAndTransition } from 'framer-motion'
 
 interface Props {
-	type: 'h1' | 'h2' | 'h3' | 'body-subtitle' | 'body-text'
+	type: 'h1' | 'h2' | 'h3' | 'h4' | 'body-subtitle' | 'body-text'
 	text: string
 	className?: string
 }
@@ -52,6 +52,16 @@ const Text = ({ type, text, className }: Props) => {
 				>
 					{text}
 				</motion.h3>
+			)
+		}
+		case 'h4': {
+			return (
+				<motion.h4
+					variants={variant}
+					className={`${classes.h3} ${className || ''}`}
+				>
+					{text}
+				</motion.h4>
 			)
 		}
 		case 'body-subtitle': {

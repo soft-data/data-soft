@@ -31,6 +31,7 @@ const Work = () => {
 	})
 	return (
 		<motion.div
+			id='works'
 			ref={ref}
 			initial='hidden'
 			variants={workVariants}

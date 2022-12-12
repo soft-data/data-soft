@@ -4,7 +4,7 @@ import { TargetAndTransition, motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import classes from './services.module.scss'
-import { Text } from '../../components'
+import { ServicesCard, Text } from '../../components'
 
 const servicesVariants: {
 	show: TargetAndTransition
@@ -48,6 +48,16 @@ const Services = () => {
 				text='We help buisnesses to make their product come to life, worldwide'
 				className={classes.title}
 			/>
+
+			<motion.div
+				variants={servicesVariants}
+				className={classes.cards}
+			>
+				<ServicesCard />
+				<ServicesCard />
+				<ServicesCard />
+				<ServicesCard />
+			</motion.div>
 		</motion.div>
 	)
 }
