@@ -1,0 +1,28 @@
+@import '/styles/var';
+@import '../../node_modules/rfs/scss.scss';
+.btn {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: $primary;
+	display: inline-block;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&[data-type='primary'] {
+		background-color: $primary-light;
+		color: $primary;
+		padding: 7px 25px;
+	}
+	&[data-type='light'] {
+		display: inline-block;
+		background: #ffffff;
+		color: $primary;
+		font-weight: 700;
+		@include rfs(18px, font-size);
+		@include rfs(24px, line-height);
+		@include rfs(10px 30px, padding);
+		@include rfs(30px, border-radius);
+	}
+}

@@ -4,7 +4,7 @@ import { motion, TargetAndTransition } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import classes from './work.module.scss'
-import { Text } from '../../components'
+import { Button, Text } from '../../components'
 
 const workVariants: {
 	show: TargetAndTransition
@@ -56,7 +56,13 @@ const Work = () => {
 				>
 					<Text
 						type='body-text'
+						className={classes.body_text}
 						text='Lorem ipsum dolor sit amet consectetur. Sed lacus posuere sit ullamcorper dignissim. Pellentesque quis morbi sapien lectus accumsan porttitor malesuada'
+					/>
+					<Button
+						role='link'
+						text='See All Warks'
+						href='/all-works'
 					/>
 				</motion.div>
 			</motion.div>

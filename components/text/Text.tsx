@@ -5,6 +5,7 @@ import { motion, TargetAndTransition } from 'framer-motion'
 interface Props {
 	type: 'h1' | 'h2' | 'h3' | 'body-subtitle' | 'body-text'
 	text: string
+	className?: string
 }
 
 const variant: {
@@ -21,13 +22,13 @@ const variant: {
 	}
 }
 
-const Text = ({ type, text }: Props) => {
+const Text = ({ type, text, className }: Props) => {
 	switch (type) {
 		case 'h1': {
 			return (
 				<motion.h1
 					variants={variant}
-					className={classes.h1}
+					className={`${classes.h1} ${className || ''}`}
 				>
 					{text}
 				</motion.h1>
@@ -37,7 +38,7 @@ const Text = ({ type, text }: Props) => {
 			return (
 				<motion.h2
 					variants={variant}
-					className={classes.h2}
+					className={`${classes.h2} ${className || ''}`}
 				>
 					{text}
 				</motion.h2>
@@ -47,7 +48,7 @@ const Text = ({ type, text }: Props) => {
 			return (
 				<motion.h3
 					variants={variant}
-					className={classes.h3}
+					className={`${classes.h3} ${className || ''}`}
 				>
 					{text}
 				</motion.h3>
@@ -57,7 +58,7 @@ const Text = ({ type, text }: Props) => {
 			return (
 				<motion.h4
 					variants={variant}
-					className={classes.body_subtitle}
+					className={`${classes.body_subtitle} ${className || ''}`}
 				>
 					{text}
 				</motion.h4>
@@ -65,7 +66,10 @@ const Text = ({ type, text }: Props) => {
 		}
 		case 'body-text': {
 			return (
-				<motion.p variants={variant} className={classes.body_text}>
+				<motion.p
+					variants={variant}
+					className={`${classes.body_text} ${className || ''}`}
+				>
 					{text}
 				</motion.p>
 			)

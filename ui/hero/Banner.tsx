@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Button } from '../../components'
 
 interface Props {
 	classes: {
@@ -50,14 +51,12 @@ const Banner = ({ classes }: Props) => {
 						We are a website & app development agency
 					</motion.h1>
 				</motion.div>
-				<motion.span variants={bannervariant}>
-					<Link
-						className={classes.link}
-						href='/'
-					>
-						Bog`lanish
-					</Link>
-				</motion.span>
+				<Button
+					role='link'
+					href='/'
+					text='Bog`lanish'
+					type='light'
+				/>
 			</motion.div>
 		</motion.div>
 	)

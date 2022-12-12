@@ -38,7 +38,7 @@
 		z-index: 1;
 		color: white;
 		display: flex;
-		align-items: justify;
+		align-items: flex-start;
 		justify-content: space-between;
 		flex-direction: column;
 		@include rfs(20px, gap);
@@ -60,16 +60,6 @@
 		font-size: 24px;
 		@include rfs(3rem, line-height);
 		color: white;
-	}
-	.link {
-		display: inline-block;
-		background: #ffffff;
-		color: $primary;
-		font-weight: 700;
-		@include rfs(18px, font-size);
-		@include rfs(24px, line-height);
-		@include rfs(10px 30px, padding);
-		@include rfs(30px, border-radius);
 	}
 	.lastnews {
 		width: 100%;
