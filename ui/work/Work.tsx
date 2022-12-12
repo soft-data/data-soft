@@ -1,10 +1,9 @@
 'use client'
-import React from 'react'
 import { motion, TargetAndTransition } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import classes from './work.module.scss'
-import { Button, Text } from '../../components'
+import { Button, Text, WorkCard } from '../../components'
 
 const workVariants: {
 	show: TargetAndTransition
@@ -65,6 +64,13 @@ const Work = () => {
 						href='/all-works'
 					/>
 				</motion.div>
+			</motion.div>
+			<motion.div
+				variants={workVariants}
+				className={classes.cards}
+			>
+				<WorkCard />
+				<WorkCard />
 			</motion.div>
 		</motion.div>
 	)

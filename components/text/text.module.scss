@@ -9,10 +9,14 @@
 	color: $black;
 }
 .h3 {
+	font-weight: 700;
+	@include rfs(30px, font-size);
+	@include rfs(44px, line-height);
+	color: $black;
 }
 .body_subtitle {
 	font-weight: 700;
-	@include rfs(20px, font-size);
+	@include rfs(18px, font-size);
 	@include rfs(24px, line-height);
 	color: $secondary;
 }

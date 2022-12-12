@@ -1,0 +1,28 @@
+@import 'styles/var';
+@import '../../node_modules/rfs/scss';
+
+.card {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	@include rfs(22px, gap);
+}
+.img {
+	width: 100%;
+	@include rfs(450px, height);
+	@include rfs(35px, border-radius);
+	object-fit: cover;
+	object-position: center;
+}
+.body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+// .link {
+// }
