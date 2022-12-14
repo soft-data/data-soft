@@ -4,11 +4,12 @@
 .card {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	gap: 20px;
 	@include media-up(md) {
 		flex-direction: row;
-		@include rfs(140px, gap);
+		@include rfs(60px, gap);
 	}
 }
 .body {
@@ -24,7 +25,7 @@
 	object-position: center;
 	@include rfs(30px, border-radius);
 	@include media-up(md) {
-		width: auto;
+		width: 50%;
 	}
 }
 

@@ -11,7 +11,7 @@
 	@include rfs(30px, gap);
 	@include rfs(30px, border-radius);
 	@include media-up(md) {
-		@include rfs(70px 200px, padding);
+		@include rfs(70px 80px, padding);
 	}
 }
 
