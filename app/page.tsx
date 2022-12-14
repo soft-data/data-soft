@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Hero, Services, Work } from '../ui'
+import { About, Hero, Services, Work } from '../ui'
 import { motion, TargetAndTransition } from 'framer-motion'
 
 const variant: {
@@ -25,6 +25,7 @@ const Home = () => {
 			<Hero />
 			<Work />
 			<Services />
+			<About />
 		</motion.div>
 	)
 }
